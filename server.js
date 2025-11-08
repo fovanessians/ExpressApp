@@ -8,6 +8,8 @@
 var fs = require('fs');
 var express = require('express');
 var app = express();
+let bodyParser = require('body-parser');
+console.log('Express Dependencies')
 
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
@@ -52,6 +54,31 @@ app.use(function(err, req, res, next) {
       .send(err.message || 'SERVER ERROR');
   }  
 })
+
+app.get('/test', function routeHandler(req, res) {
+  res.send('ok');
+});
+
+
+
+/*app.use('/json', (req, res, next) => {
+  console.log(req.method + " " + req.path + " " + 
+ " - " + " " + req.ip);
+  next();
+}); 
+*/
+
+app.get('/now', function(req, res, next) {
+  req.time = new Date().toString();  // get date
+  next();
+}, function(req, res) {
+  res.json({time: req.time});
+});
+
+app.get('/:word/echo', function(req, res) {
+  let {word} = req.params;
+  res.json({echo: word});
+});
 
 //Listen on port set in environment variable or default to 3000
 const listener = app.listen(process.env.PORT || 3000, function () {
