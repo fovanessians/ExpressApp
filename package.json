@@ -1,16 +1,22 @@
 {
-	"name": "fcc-learn-npm-package-json",
+	"name": "express-mongo-npm-package-json",
   "author": "Frank Ovanessians",
   "description": "API Development: Manage Node.js projects and npm packages using package.json ",
-  "keywords": [ "freecodecamp", "API", "backend" ],
+  "keywords": [ "express", "API", "backend" ],
   "license": "MIT",
   "version": "1.0.0",
 	"dependencies": {
-		"express": "^4.14.0"
+		"express": "^4.14.0",
+		"body-parser": "^1.15.2",
+    	"cookie-parser": "^1.4.3",
+    	"dotenv": "^16.0.1",
+    	"fcc-express-bground": "https://github.com/freeCodeCamp/fcc-express-bground-pkg.git",
+		"mongodb": "4.1",
+    	"mongoose": "^5.13.17"
 	},
 
   "comments": {
-    "dependencies": "@freecodecamp/example ^1.2.13 key value for dependency example above"
+    "dependencies": "none"
   },
   
 	"main": "server.js",
@@ -22,44 +28,11 @@
 		"url": "https://idontknow/todo.git"
 	}
 }
-{
-  "name": "fcc-learn-node-with-express",
-  "version": "0.1.0",
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "cookie-parser": "^1.4.3",
-    "dotenv": "^16.0.1",
-    "fcc-express-bground": "https://github.com/freeCodeCamp/fcc-express-bground-pkg.git"
-  },
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  }
-}
-
-{
-  "name": "fcc-mongo-mongoose-challenges",
-  "version": "0.0.1",
-  "description": "A boilerplate project",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "body-parser": "^1.15.2",
-    "dotenv": "^8.2.0",
-    "express": "^4.12.4",
-    "mongodb": "4.1",
-    "mongoose": "^5.13.17"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/freeCodeCamp/boilerplate-mongomongoose.git"
-  },
+ 
   "keywords": [
     "node",
     "mongoose",
     "express"
-  ],
-  "license": "MIT"
+  ]
 }
+
