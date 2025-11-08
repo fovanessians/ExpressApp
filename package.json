@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "0.0.1",
-  "main":"app.js",
+  "main":"server.js",
   "author":"Frank Ovanessians",
   "description": "API Development: Manage Node.js, Express projects, and npm packages using package.json ",
   "dependencies": {
