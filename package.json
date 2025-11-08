@@ -2,8 +2,8 @@
   "name": "app",
   "version": "0.0.1",
   "main":"test.js",
-  "author":"Test",
-  "description": "For test ",
+  "author":"Frank Ovanessians",
+  "description": "API Development: Manage Node.js, Express projects, and npm packages using package.json ",
   "dependencies": {
     "express": "latest",
     "mongoose": "latest"
