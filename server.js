@@ -44,7 +44,7 @@ app.use(function(err, req, res, next) {
 })
 
 
-app.get("/", (req, res) => res.type('html').send(html_status));
+app.get("/test", (req, res) => res.type('html').send(html_status));
 const html_status = `
 <!DOCTYPE html>
 <html>
