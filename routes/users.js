@@ -13,16 +13,16 @@ router.get('/login', (req, res) => {
 //The first and last name parameters should be encoded in a 
 //query string e.g. ?first=firstname&last=lastname.
 
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+express.use(express.urlencoded({ extended: false }));
+express.use(express.json());
 
-app.post('/name', (req, res, next) => {
+router.post('/name', (req, res, next) => {
   let firstName = req.body.first;
   let lastName = req.body.last;
   res.json({name: `${firstName} ${lastName}`})  
 });
 
-app.get('/nameGet', (req, res, next) => {
+router.get('/nameGet', (req, res, next) => {
   let firstName = req.query.first;
   let lastName = req.query.last;
   res.json({
