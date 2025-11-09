@@ -48,6 +48,26 @@ app.get('/:word/echo', function(req, res) {
   res.json({echo: word});
 });
 
+app.get('/express', (req, res, next) => {
+  res.send('Hello Express');
+}) 
+
+app.get("/json_", (req, res) => {
+  res.json({message: "Hello json"});
+});
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+app.get('/nameGet', (req, res, next) => {
+  let firstName = req.query.first;
+  let lastName = req.query.last;
+  res.json({
+    name: `${firstName} ${lastName}`
+  });
+});
+
+
 app.get('/test', (req, res, next) => {
   res.status(200).send('OK');;
   next();
