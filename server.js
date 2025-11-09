@@ -44,9 +44,26 @@ app.use(function(err, req, res, next) {
 })
 
 
-app.get('/test', (req, res) => {
-  res.send('ok');
-});
+app.get("/", (req, res) => res.type('html').send(html_status));
+const html_status = `
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello from Render!</title>
+    <style>
+      html {
+        font-family: neo-sans;
+        font-weight: 700;
+        font-size: calc(62rem / 16);
+		}
+
+  </head>
+  <body>
+    <section>
+      ok
+    </section>
+  </body>
+</html>
 
 
 
