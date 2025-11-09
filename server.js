@@ -48,7 +48,10 @@ app.get('/:word/echo', function(req, res) {
   res.json({echo: word});
 });
 
-
+app.get('/test', (req, res, next) => {
+  res.status(200).send('OK');;
+  next();
+}); 
 
 // Respond not found to all the wrong routes
 app.use(function(req, res, next){
