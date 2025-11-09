@@ -28,24 +28,6 @@ app.route('/')
 		  res.sendFile(process.cwd() + '/views/index.html');
     })
 
-// Respond not found to all the wrong routes
-app.use(function(req, res, next){
-  res.status(404);
-  res.type('txt').send('Not found');
-});
-
-// Error Middleware
-app.use(function(err, req, res, next) {
-  if(err) {
-    res.status(err.status || 500)
-      .type('txt')
-      .send(err.message || 'SERVER ERROR');
-  }  
-})
-
-
-
-
 
 /*app.use('/json', (req, res, next) => {
   console.log(req.method + " " + req.path + " " + 
@@ -65,6 +47,25 @@ app.get('/:word/echo', function(req, res) {
   let {word} = req.params;
   res.json({echo: word});
 });
+
+
+
+// Respond not found to all the wrong routes
+app.use(function(req, res, next){
+  res.status(404);
+  res.type('txt').send('Route Not found');
+});
+
+// Error Middleware
+app.use(function(err, req, res, next) {
+  if(err) {
+    res.status(err.status || 500)
+      .type('txt')
+      .send(err.message || 'SERVER ERROR');
+  }  
+})
+
+
 
 //Listen on port set in environment variable or default to 3001
 
