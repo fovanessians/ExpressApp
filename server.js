@@ -43,7 +43,8 @@ app.use(function(err, req, res, next) {
   }  
 })
 
-app.get('/test', function routeHandler(req, res) {
+
+app.get('/test', (req, res) => {
   res.send('ok');
 });
 
