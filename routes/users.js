@@ -3,11 +3,11 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/register', (req, res) => {
-    res.render('register');
+    res.send('register');
 });
 
 router.get('/login', (req, res) => {
-    res.render('login');
+    res.send('login');
 });
 
 //The first and last name parameters should be encoded in a 
@@ -34,6 +34,20 @@ router.get('/nameGet', (req, res, next) => {
 
 
 module.exports = router;
+
+/*
+res.send() sends raw data (text, HTML, JSON) directly to the client.
+
+res.render() renders a template file (like register.ejs, register.pug) using a configured view engine and sends the resulting HTML.
+
+For res.render('register') to work:
+
+You must have a views directory (e.g., views/register.ejs)
+You must set a view engine:
+app.set('view engine', 'ejs'); // or 'pug', 'hbs', etc.
+
+If those aren't set, you'll get an error.
+*/
 
 /*
 For the POST route, data is sent in the request body, which is typically used 
