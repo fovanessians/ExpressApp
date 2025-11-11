@@ -1,6 +1,7 @@
 // routes/users.js
 const express = require('express');
 const router = express.Router();
+let app = express();
 
 router.get('/register', (req, res) => {
     res.render('register');
@@ -13,8 +14,8 @@ router.get('/login', (req, res) => {
 //The first and last name parameters should be encoded in a 
 //query string e.g. ?first=firstname&last=lastname.
 
-express.use(express.urlencoded({ extended: false }));
-express.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 router.post('/name', (req, res, next) => {
   let firstName = req.body.first;
