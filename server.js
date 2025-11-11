@@ -14,7 +14,8 @@ let bodyParser = require('body-parser');
 
 console.log('Express Dependencies')
 
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use('/public', express.static(process.cwd() + '/public'));
 
 const userRoutes = require('./routes/users');
