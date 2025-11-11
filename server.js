@@ -16,8 +16,7 @@ console.log('Express Dependencies')
 
 
 app.use('/public', express.static(process.cwd() + '/public'));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+
 const userRoutes = require('./routes/users');
 app.use('/users', userRoutes);
 
