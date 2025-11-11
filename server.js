@@ -18,6 +18,8 @@ console.log('Express Dependencies')
 app.use('/public', express.static(process.cwd() + '/public'));
 const userRoutes = require('./routes/users');
 app.use('/users', userRoutes);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.route('/_api/package.json')
   .get(function(req, res, next) {
