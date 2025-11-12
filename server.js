@@ -21,6 +21,9 @@ app.use('/public', express.static(process.cwd() + '/public'));
 const userRoutes = require('./routes/users');
 app.use('/users', userRoutes);
 
+const whoRoutes = require('./routes/whoami');
+app.use('/info', whoRoutes);
+
 app.route('/_api/package.json')
   .get(function(req, res, next) {
     console.log('requested');
