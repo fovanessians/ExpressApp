@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 
-app.get('/api/whoami', function (req, res) {
+router.get('/api/whoami', function (req, res) {
   const ipAddress = IP.address();
   let localLanguage = req.headers["accept-language"]
   let newUserAgent = new UserAgent(); 
@@ -12,13 +12,13 @@ app.get('/api/whoami', function (req, res) {
 
 /*
 //get route show ip address
-app.get('/api/ipaddress', (req, res) => {
+router.get('/api/ipaddress', (req, res) => {
     const ipAddress = IP.address();
     res.send(ipAddress)
 })
 */
 
-app.get('/api/os', (req, res) => {
+router.get('/api/os', (req, res) => {
   console.log(os.type());
   res.send(os.type());
 });
