@@ -12,7 +12,6 @@ router.get('/api/os', (req, res) => {
 });
 
 router.get('/api/whoami', function (req, res) {
-  req.headers
   res.json({ ipaddress: ip.address(), headers: req.headers });
 });
 
