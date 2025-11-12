@@ -6,8 +6,7 @@
   "description": "API Development: Manage Node.js, Express projects, and npm packages using package.json ",
   "dependencies": {
     "express": "latest",
-    "mongoose": "latest"
-  },
-  "ip": "^x.x.x"
-
+    "mongoose": "latest",
+    "ip": "^2.0.0"
+  }
 }
