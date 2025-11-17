@@ -67,7 +67,7 @@ const someFunc = function(done) {
 */
 
 
-
+/*
 const createAndSavePerson = (done) => {
   const firstMember = new Persons({
   name: 'Davids',
@@ -83,6 +83,20 @@ const createAndSavePerson = (done) => {
     
   });
 };
+*/
+let firstMember = new Persons({
+  name: 'Davids',
+  age: 252,
+  favoriteFoods: ["beans", "cake"],
+  updateDate: 2020-05-11,
+  newNumber: 'yes'   
+})
+
+firstMember.save(function(err, data) {
+if (err) return console.error(err);
+  //done(null, data)
+  console.log(data);
+});
 
 console.log("Passed MongoDB save");
 
