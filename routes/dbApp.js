@@ -4,6 +4,7 @@ const mySecret = process.env['MONGO_URI']
 mongoose.connect(mySecret, { dbName: 'Person' }, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
+
 // User model***************************
 const User = mongoose.model('names',{
     name: { type: String },
@@ -42,7 +43,7 @@ const firstMember = new Persons({
 
 
 
-
+//**** NEW SCHEMA -> NEW MODEL -> NEW INSTANCE FOR MONGOOSE**********
 
 
 let personSchema = new mongoose.Schema({
@@ -75,15 +76,10 @@ const createAndSavePerson = (done) => {
   favoriteFoods: ["beans", "cake"],
   updateDate: 2020-05-11,
   newNumber: 'yes'   
-});
-  firstMember.save(function(err, data) {
-  if (err) return console.error(err);
-    done(null, data)
-    
-    
-  });
+})
 };
 */
+
 let firstMember = new Persons({
   name: 'Davids',
   age: 252,
@@ -98,16 +94,25 @@ if (err) return console.error(err);
   console.log(data);
 });
 
+
+
 console.log("Passed MongoDB save");
 
 let arrayOfPeople = [{name: 'Dean', age: 15, favoriteFoods: ["rice"]}, {name: 'Katherine', age: 73, favoriteFoods: ["banana", "soup"]}];
 
+/*
 const createManyPeople = (arrayOfPeople, done) => {
   Persons.create(arrayOfPeople, function(err, data) {
   if (err) return console.error(err);
     done(null, data)
   });
 };
+*/
+
+Persons.create(arrayOfPeople, function(err) {
+if (err) return console.error(err);
+  //done(null, data)
+});
 
 
 const findPeopleByName = (personName, done) => {
@@ -117,12 +122,17 @@ const findPeopleByName = (personName, done) => {
   });
 };
 
-const findOneByFood = (food, done) => {
-  Persons.findOne({favoriteFoods: food}, function(err, data) {
-  if (err) return console.error(err);
-    done(null, data)   
-  });
+food = 'rice';
+let findOneByFood = async (food) => {
+  return console.log(await Persons.findOne({favoriteFoods: food}));
+  
 };
+
+console.log('-----findOneByFood-----');
+console.log(findOneByFood('rice'));
+console.log(findOneByFood.favoriteFoods);
+console.log(findOneByFood.Persons);
+console.log('-----findOneByFood-----');
 
 const findPersonById = (personId, done) => {
   Persons.findById(personId, function(err, docs) {
@@ -181,20 +191,44 @@ const queryChain = (done) => {
     });
  };
 
-/** **Well Done !!**
-/* You completed these challenges, let's go celebrate !
- */
+/*
+Thenable Class Example
+class MyThenable {
+  constructor(value) {
+    this.value = value;
+  }
+
+  then(onFulfilled, onRejected) {
+    // Simulate async resolution
+    setTimeout(() => onFulfilled(this.value * 2), 1000);
+  }
+}
+
+const result = await new MyThenable(5);
+console.log(result); // 10 after 1 second
+
+Use in Promise Chains
+Promise.resolve(1)
+  .then(result => {
+    return {
+      then: (resolve) => resolve(result * 3)
+    };
+  })
+  .then(console.log); // 3
+  */
 
 //----- **DO NOT EDIT BELOW THIS LINE** ----------------------------------
 
 exports.PersonModel = Persons;
-exports.createAndSavePerson = createAndSavePerson;
+exports.firstMember = firstMember;
+//exports.createAndSavePerson = createAndSavePerson;
 exports.findPeopleByName = findPeopleByName;
 exports.findOneByFood = findOneByFood;
 exports.findPersonById = findPersonById;
 exports.findEditThenSave = findEditThenSave;
 exports.findAndUpdate = findAndUpdate;
-exports.createManyPeople = createManyPeople;
+//exports.createManyPeople = createManyPeople;
+exports.findOneByFood = findOneByFood;
 exports.removeById = removeById;
 exports.removeManyPeople = removeManyPeople;
 exports.queryChain = queryChain;
