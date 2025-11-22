@@ -1,0 +1,251 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parallax with Bootstrap Buttons</title>
+  
+  </head>
+<body>
+    
+    <!-- Parallax Section -->
+    <section class="parallax">
+        <div class="container">
+          <h1><b>Welcome to the Parallax Page for Diet and Exercise</b></h1>
+          <h2><i>Scroll down to input data and calculate your net calorie intake</i></h2>
+            <div class="parallax-button">
+                
+            </div>
+        </div>
+    </section>
+    
+   <!--Animation-->
+      <section class="animation">
+      <div id="calories-database" class="melting-text-container">
+        </div>        
+        </section>
+ <!--Animation-->
+  
+
+    <!-- Bootstrap Button Example -->
+
+    <section class="container-mt-5a">
+      <br>
+      <br>
+      <div id="center">
+        <h2>Meal Input</h2>
+      </div>
+        <br>
+        <center>
+            <button class="btn btn-success" id="buttonBreakfast">Breakfast
+          </button>
+ <dialog id="dialogBreakfast">
+  <h2>how many calories in your breakfast?</h2>
+ <form method="dialog">
+      
+      <div id="breakfast-calories">
+   </div>
+      <br>
+  </form>
+ </dialog> 
+          
+            <button class="btn btn-danger" id="buttonLunch">Lunch</button>
+          
+          <dialog id="dialogLunch">
+  <h2>how many calories in your lunch?</h2>
+ <form method="dialog">
+  <div id="lunch-calories">
+   </div>
+      <br>
+  </form>
+ </dialog> 
+            <button class="btn btn-success" id="buttonDinner">Dinner</button>
+           <dialog id="dialogDinner">
+  <h2>how many calories in your dinner?</h2>
+ <form method="dialog">
+  <div id="dinner-calories">
+   </div>
+      <br>
+  </form>
+ </dialog> 
+          
+            <button class="btn btn-danger" id="buttonSnacks">Snacks</button>
+           <dialog id="dialogSnacks">
+  <h2>how many calories in your Snacks?</h2>
+ <form method="dialog">
+  <div id="snacks-calories">
+   </div>
+      <br>
+  </form>
+ </dialog> 
+        </center>
+    
+          <br>
+          <hr>
+          <br>
+          </section>
+      <section class="container-mt-5b"> 
+        <div id="center">
+           <h2>Activity</h2>
+        </div>
+        <center>
+            <table class="table-striped">
+        <thead>
+          <i>Daily & Repetitive</i>
+          
+         </thead>
+        <tbody>
+          <tr>
+           <td>
+             <button type="button" class="btn btn-primary" id="buttonOfficeWork">Office Work</button>
+           <dialog id="dialogOfficeWork">
+  <h2>how many calories did you burn working in your office?</h2>
+ <form method="dialog">
+ <div id="office-work-calories">
+   </div>
+      <br>
+  </form>
+ </dialog> 
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary" id="buttonManualLabor">Manual Labor</button>
+           <dialog id="dialogManualLabor">
+  <h2>how many calories did you burn working in a trade?</h2>
+ <form method="dialog">
+  <div id="labor-calories">
+   </div>
+  </form>
+ </dialog> 
+             </td>  
+            <td>
+            <button type="button" class="btn btn-primary" id="buttonCooking">Cooking</button>
+           <dialog id="dialogCooking">
+  <h2>how many calories did you burn cooking?</h2>
+ <form method="dialog">
+    <div id="cooking-calories">
+   </div>
+  </form>
+ </dialog> 
+             </td>
+            <td>
+            <button type="button" class="btn btn-primary" id="buttonWalking">Walking</button>
+           <dialog id="dialogWalking">
+  <h2>how many calories did you burn walking?</h2>
+ <form method="dialog">
+      <div id="walking-calories">
+   </div>
+  </form>
+ </dialog> 
+             </td>   
+            </tr>
+        </tbody>
+    </table>
+          <br>
+      <table class="table-striped">
+        <thead>
+           
+          <i>Exercise</i>
+          
+         </thead>
+        <tbody>
+          <tr>
+           <td>
+             <button type="button" class="btn btn-secondary" id="buttonRunning">Running</button>
+           <dialog id="dialogRunning">
+  <h2>how many calories did you burn running?</h2>
+ <form method="dialog">
+  <div id="running-calories">
+   </div>
+  </form>
+ </dialog> 
+          </td>
+          <td>
+            <button type="button" class="btn btn-secondary" id="buttonGym">Gym</button>
+           <dialog id="dialogGym">
+  <h2>how many calories did you burn working in your gym?</h2>
+ <form method="dialog">
+    <div id="gym-calories">
+   </div>
+  </form>
+ </dialog> 
+             </td>  
+            <td>
+            <button type="button" class="btn btn-secondary" id="buttonSports">Sports</button>
+           <dialog id="dialogSports">
+  <h2>how many calories did you burn playing sports?</h2>
+ <form method="dialog">
+      <div id="sports-calories">
+   </div>
+  </form>
+ </dialog> 
+             </td>
+            <td>
+            <button type="button" class="btn btn-secondary" id="buttonOutdoor">Outdoor</button>
+           <dialog id="dialogOutdoor">
+  <h2>how many calories did you burn doing gardening or outdoor stuff?</h2>
+ <form method="dialog">
+  <div id="outdoor-calories">
+   </div>
+  </form>
+ </dialog> 
+             </td>   
+            </tr>
+        </tbody>
+    </table>
+          </center>
+      <br>
+      <hr>
+        
+    </section>
+
+  <section class="container-database">
+        <br>
+    <div id="references"> 
+          <table id="styled-table">
+            <caption>Calorie Links</caption>
+ 	<thead>
+		<tr>
+			<th scope="column">Meta Data</th>
+			<th scope="column">URL</th>
+		</tr>
+ 	</thead>
+	<tbody>
+		<tr>
+	 		<th scope="row">Exercise Calculator</th>
+      <td><a href="https://www.webmd.com/fitness-exercise/healthtool-exercise-calculator"><b><i>Web MD Fitness Calculator</a></td>
+	 	</tr>
+	 	<tr>
+		 	<th scope="row">Calorie Burn Data</th>
+			<td><a href="https://www.kaggle.com/datasets/aadhavvignesh/calories-burned-during-exercise-and-activities"><b><i>Kaggle Dataset</i></b></a></td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th scope="row">Calorie Food Intake</th>
+      <td><a href="https://www.calories.info/"><b><i>Food & Meal Data</i></b></a></td>
+		</tr>
+	</tfoot>
+</table>
+      </div>
+      </section>
+  
+   <section id="class-react">
+    <div id="root">
+      </div>
+  </section>
+  
+  <section id="dynamic-table-section">
+    <div id="data-table">
+      </div>
+  </section>
+
+  
+    <section>
+  <div id="imgDiv" class="faded">  
+   <center> <a href="#">
+        <img src="https://cdn.pixabay.com/photo/2016/05/08/15/39/icon-1379313_1280.png" alt="Back to Top">
+    </a>
+    </center>
+  </div>
+  </section>
+      </body>
+  </html>
