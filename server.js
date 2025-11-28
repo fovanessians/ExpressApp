@@ -24,6 +24,9 @@ app.use('/users', userRoutes);
 const whoRoutes = require('./routes/whoami');
 app.use('/info', whoRoutes);
 
+const queryJS = require('./routes/whoami');
+app.use('/info', queryJS);
+
 app.route('/_api/package.json')
   .get(function(req, res, next) {
     console.log('requested');
