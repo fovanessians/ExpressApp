@@ -77,8 +77,10 @@ app.get('/nameGet', (req, res, next) => {
   });
 });
 
+/*
 let queryIndex = require('./routes/query');
 app.use('/', queryIndex);
+*/
 
 app.get('/test', (req, res, next) => {
   res.status(200).send('OK');;
