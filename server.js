@@ -78,8 +78,8 @@ app.get('/nameGet', (req, res, next) => {
 });
 
 
-let exerIndex = require('./routes/exercise_tracker');
-app.use('/', exerIndex);
+let dbAppIndex = require('./routes/dbApp');
+app.use('/', dbAppIndex);
 
 
 app.get('/test', (req, res, next) => {
