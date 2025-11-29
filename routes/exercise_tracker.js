@@ -6,7 +6,7 @@ require('dotenv').config()
 app.use(cors())
 app.use(express.static('public'))
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html')
+  res.sendFile(__dirname + '/views/exercise_tracker.html')
 });
 
 
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 const mongoose = require("mongoose");
-const mySecret = process.env['SECRET_KEY']
+const mySecret = process.env['MONGO_URI']
 mongoose.connect(mySecret, { dbName: 'exercisedb' }, { useNewUrlParser: true, useUnifiedTopology: true });
 const shortid = require('shortid');
 // Basic Configuration
@@ -227,7 +227,8 @@ app.get("/api/users/:_id/logs", async (req, res) => {
 
   */
 
-
+/*
 const listener = app.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port)
 })
+*/
