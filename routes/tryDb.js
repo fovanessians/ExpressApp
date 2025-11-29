@@ -14,3 +14,6 @@ router.get("/is-mongoose-ok", function (req, res) {
     res.json({ isMongooseOk: false });
   }
 });
+
+module.exports = router;
+
