@@ -1,3 +1,5 @@
+let router = express.Router();
+
 let mongoose;
 try {
   mongoose = require("mongoose");
