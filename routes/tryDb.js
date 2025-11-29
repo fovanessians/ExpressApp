@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 require('dotenv').config();
-const mongoose = require("mongoose");
+//const mongoose = require("mongoose");
 const mySecret = process.env['MONGO_URI']
 mongoose.connect(mySecret, { dbName: 'test' }, { useNewUrlParser: true, useUnifiedTopology: true });
 
