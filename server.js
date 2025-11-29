@@ -77,10 +77,10 @@ app.get('/nameGet', (req, res, next) => {
   });
 });
 
-/*
+
 let exerIndex = require('./routes/exercise_tracker');
 app.use('/', exerIndex);
-*/
+
 
 app.get('/test', (req, res, next) => {
   res.status(200).send('OK');;
