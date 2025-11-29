@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 const mongoose = require("mongoose");
 const mySecret = process.env['MONGO_URI']
 mongoose.connect(mySecret, { dbName: 'exercisedb' }, { useNewUrlParser: true, useUnifiedTopology: true });
-const shortid = require('shortid');
+//const shortid = require('shortid');
 // Basic Configuration
 const port = process.env.PORT || 3000;
 
