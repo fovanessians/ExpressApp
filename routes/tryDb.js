@@ -34,6 +34,10 @@ const new_dev = new Dev({
 })
   
 new_dev.save(new_dev)
+
+router.get('/trySave', function (req, res) {
+  res.json({ genre: new_dev.genre, num: new_dev.num });
+});
 //*****************************************
 
 module.exports = router;
