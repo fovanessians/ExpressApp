@@ -22,5 +22,26 @@ router.get("/is-mongoose-ok", function (req, res) {
   }
 });
 
+// User model***************************
+const Dev = mongoose.model('xper',{
+    genre: { type: String },
+    num: { type: Number }
+});
+  
+var new_dev = new Dec({
+    genre: 'Wizard',
+    num:49
+})
+  
+new_dev.save(function(err,result){
+    if (err){
+        console.log(err);
+    }
+    else{
+        console.log(result)
+    }
+})
+//*****************************************
+
 module.exports = router;
 
