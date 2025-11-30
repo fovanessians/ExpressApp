@@ -28,19 +28,12 @@ const Dev = mongoose.model('xper',{
     num: { type: Number }
 });
   
-var new_dev = new Dev({
+const new_dev = new Dev({
     genre: 'Wizard',
     num:49
 })
   
-new_dev.save(function(err,result){
-    if (err){
-        console.log(err);
-    }
-    else{
-        console.log(result)
-    }
-})
+new_dev.save(new_dev)
 //*****************************************
 
 module.exports = router;
