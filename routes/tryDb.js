@@ -32,7 +32,7 @@ const new_dev = new Dev({
     genre: 'Wizard',
     num:49
 })
-new_dev.save(new_dev)
+new_dev.save(new_dev);
 
 function confirm() {
   console.log("saved");
