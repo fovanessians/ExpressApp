@@ -28,7 +28,7 @@ const Dev = mongoose.model('xper',{
     num: { type: Number }
 });
   
-var new_dev = new Dec({
+var new_dev = new Dev({
     genre: 'Wizard',
     num:49
 })
