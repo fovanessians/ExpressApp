@@ -32,13 +32,27 @@ const new_dev = new Dev({
     genre: 'Wizard',
     num:49
 })
-  
 new_dev.save(new_dev)
+
+function confirm() {
+  console.log("saved");
+}
+function gnome(callback) {
+  Dev.save({genre: 'Gnome', num:5};
+  callback();
+}
+
+gnome(confirm);
 
 router.get('/trySave', function (req, res) {
   res.json({ genre: new_dev.genre, num: new_dev.num });
 });
 //*****************************************
+
+food = 'rice';
+let findOneByFood = async (food) => {
+  return console.log(await Persons.findOne({favoriteFoods: food}));
+  };
 
 module.exports = router;
 
