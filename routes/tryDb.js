@@ -38,7 +38,7 @@ function confirm() {
   console.log("saved");
 }
 function gnome(callback) {
-  Dev.save({genre: 'Gnome', num:5};
+  Dev.save({genre: 'Gnome', num:5});
   callback();
 }
 
