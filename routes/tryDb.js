@@ -35,7 +35,7 @@ const new_dev = new Dev({
 new_dev.save(new_dev);
 
 function confirm() {
-  console.log("saved");
+  console.log("gnome saved");
 }
 function gnome(callback) {
   Dev.create(new Dev({genre: 'Gnome', num:5}));
