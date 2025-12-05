@@ -38,7 +38,10 @@ function confirm() {
   console.log("gnome saved");
 }
 function gnome(callback) {
-  Dev.create(new Dev({genre: 'Gnome', num:5}));
+  Dev.create(new Dev([{genre: 'Gnome', num:5}, 
+                      {genre: 'Gnome', num:18}, 
+                      {genre: 'Gnome', num:22}, 
+                      {genre: 'Elf', num:1}] ));
   callback();
 }
 
@@ -49,9 +52,9 @@ router.get('/trySave', function (req, res) {
 });
 //*****************************************
 
-food = 'rice';
-let findOneByFood = async (food) => {
-  return console.log(await Persons.findOne({favoriteFoods: food}));
+genreSRCH = 'Gnome';
+let findOneByGenre = async (genreSRCH) => {
+  return console.log(await Dev.findOne({genre: genreSRCH}));
   };
 
 module.exports = router;
