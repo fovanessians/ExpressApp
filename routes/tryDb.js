@@ -56,6 +56,7 @@ genreSRCH = 'Gnome';
 let findOneByGenre = async (genreSRCH) => {
   return console.log(await Dev.findOne({genre: genreSRCH}).sort({ name: 1 }));
   };
+findOneByGenre();
 
 module.exports = router;
 
