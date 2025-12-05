@@ -38,10 +38,10 @@ function confirm() {
   console.log("gnome saved");
 }
 function gnome(callback) {
-  Dev.create(Dev([{genre: 'Gnome', num:5}, 
+  Dev.create([{genre: 'Gnome', num:5}, 
                       {genre: 'Gnome', num:18}, 
                       {genre: 'Gnome', num:22}, 
-                      {genre: 'Elf', num:1}] ));
+                      {genre: 'Elf', num:1}]);
   callback();
 }
 
