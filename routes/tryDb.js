@@ -42,6 +42,7 @@ function gnome(callback) {
                       {genre: 'Gnome', num:18}, 
                       {genre: 'Gnome', num:22}, 
                       {genre: 'Elf', num:1}]);
+  sleep(2000);
   callback();
 }
 
@@ -54,12 +55,12 @@ router.get('/trySave', function (req, res) {
 
 genreSRCH = 'Gnome';
 let findByGenre = async (g) => {
-  return console.log(await test.xpercs.find({genre: g}).sort({ num: 1 }));
+  return console.log(await Dev.find({genre: g}).sort({ num: 1 }));
   };
 findByGenre(genreSRCH);
 
 router.get('/tryArrayRT', function (req, res) {
-  res.json({ genre: test.xpercs.genre, num: test.xpercs.num });
+  res.json({ genre: Dev.genre, num: Dev.num });
 });
 
 module.exports = router;
