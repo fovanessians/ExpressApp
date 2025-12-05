@@ -52,15 +52,7 @@ router.get('/trySave', function (req, res) {
 });
 //*****************************************
 
-genreSRCH = 'Gnome';
-let findByGenre = async (g) => {
-  return console.log(await test.xperc.find({genre: g}).sort({ num: 1 }));
-  };
-findByGenre(genreSRCH);
 
-router.get('/tryArrayRT', function (req, res) {
-  res.json({ genre: test.xperc.genre, num: test.xperc.num });
-});
 
 module.exports = router;
 
