@@ -34,15 +34,16 @@ const new_dev = new Dev({
 })
 new_dev.save(new_dev);
 
-function confirm() {
-  console.log("gnome saved");
+async function confirm() {
+  await new Promise(resolve => {
+      console.log("gnome saved");
+      return setTimeout(resolve, 2000)
 }
 function gnome(callback) {
   Dev.create([{genre: 'Gnome', num:5}, 
                       {genre: 'Gnome', num:18}, 
                       {genre: 'Gnome', num:22}, 
                       {genre: 'Elf', num:1}]);
-  await setTimeout(5000);
   callback();
 }
 
