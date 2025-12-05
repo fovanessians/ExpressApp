@@ -23,7 +23,7 @@ router.get("/is-mongoose-ok", function (req, res) {
 });
 
 // User model***************************
-const Dev = mongoose.model('xper',{
+const Dev = mongoose.model('xperc',{
     genre: { type: String },
     num: { type: Number }
 });
@@ -54,12 +54,12 @@ router.get('/trySave', function (req, res) {
 
 genreSRCH = 'Gnome';
 let findByGenre = async (g) => {
-  return console.log(await xper.find({genre: g}).sort({ num: 1 }));
+  return console.log(await test.xperc.find({genre: g}).sort({ num: 1 }));
   };
 findByGenre(genreSRCH);
 
 router.get('/tryArrayRT', function (req, res) {
-  res.json({ genre: xper.genre, num: xper.num });
+  res.json({ genre: test.xperc.genre, num: test.xperc.num });
 });
 
 module.exports = router;
