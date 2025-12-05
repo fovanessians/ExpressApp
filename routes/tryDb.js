@@ -42,7 +42,7 @@ function gnome(callback) {
                       {genre: 'Gnome', num:18}, 
                       {genre: 'Gnome', num:22}, 
                       {genre: 'Elf', num:1}]);
-  sleep(2000);
+  await setTimeout(5000);
   callback();
 }
 
