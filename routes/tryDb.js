@@ -53,10 +53,10 @@ router.get('/trySave', function (req, res) {
 //*****************************************
 
 genreSRCH = 'Gnome';
-let findOneByGenre = async (genreSRCH) => {
-  return console.log(await Dev.findOne({genre: genreSRCH}).sort({ name: 1 }));
+let findOneByGenre = async (g) => {
+  return console.log(await Dev.findOne({genre: g}).sort({ name: 1 }));
   };
-findOneByGenre();
+findOneByGenre(genreSRCH);
 
 module.exports = router;
 
