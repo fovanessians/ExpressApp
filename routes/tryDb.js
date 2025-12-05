@@ -54,7 +54,7 @@ router.get('/trySave', function (req, res) {
 
 genreSRCH = 'Gnome';
 let findOneByGenre = async (g) => {
-  return console.log(await Dev.findOne({genre: g}).sort({ name: 1 }));
+  return console.log(await Dev.find({genre: g}).sort({ name: 1 }));
   };
 findOneByGenre(genreSRCH);
 
