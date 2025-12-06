@@ -63,7 +63,7 @@ let findByGenre = async (g) => {
   console.log(results);
   return results
   };
-await findByGenre(genreSRCH);
+findByGenre(genreSRCH);
 
 
 
