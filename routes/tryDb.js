@@ -35,10 +35,10 @@ const new_dev = new Dev({
 new_dev.save(new_dev);
 
 async function confirm() {
-  await new Promise(resolve => {
+  await new Promise((resolve) => {
     setTimeout(() => {
       console.log("gnome saved");
-      resolve();
+      resolve('set timeout Promise resolved');
     }, 2000);
   });
 }
