@@ -66,7 +66,7 @@ let findByGenre = async (g) => {
 findByGenre(genreSRCH);
 
 router.get('/tryArrayRT', function (req, res) {
-  res.json({ genre: results.genre, num: results.num });
+  res.json({ genre: findByGenre.genre, num: findByGenre.num });
 });
 
 module.exports = router;
