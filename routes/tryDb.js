@@ -60,13 +60,13 @@ router.get('/trySave', function (req, res) {
 genreSRCH = 'Gnome';
 let findByGenre = async (g) => {
   let results = await Dev.find({genre: g}).sort({ num: 1 });
-  console.log(results);
+  //console.log(results);
   return results
   };
 findByGenre(genreSRCH);
 
 router.get('/tryArrayRT', async function (req, res) {
-  results = await findByGenre(genreSRCH);
+  results = await Dev.find({genre: 'gnome'}).sort({ num: 1 });
   res.json(results);
 });
 
