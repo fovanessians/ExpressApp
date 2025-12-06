@@ -401,10 +401,10 @@ router.post("/query-tools", function (req, res, next) {
   });
 });
 
-app.use("/_api", enableCORS, router);
+router.use("/_api", enableCORS, router);
 
 // Error handler
-app.use(function (err, req, res, next) {
+router.use(function (err, req, res, next) {
   if (err) {
     res
       .status(err.status || 500)
@@ -414,7 +414,7 @@ app.use(function (err, req, res, next) {
 });
 
 // Unmatched routes handler
-app.use(function (req, res) {
+router.use(function (req, res) {
   if (req.method.toLowerCase() === "options") {
     res.end();
   } else {
