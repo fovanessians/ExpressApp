@@ -5,6 +5,9 @@
 const express = require('express');
 const router = express.Router();
 require('dotenv').config();
+const mongoose = require("mongoose");
+const mySecret = process.env['MONGO_URI']
+mongoose.connect(mySecret, { dbName: 'test' }, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let mongoose;
 try {
@@ -38,10 +41,10 @@ const enableCORS = function (req, res, next) {
 // wrong callbacks that will never be called
 const TIMEOUT = 10000;
 
-app.use(bodyParser.urlencoded({ extended: "false" }));
-app.use(bodyParser.json());
+router.use(bodyParser.urlencoded({ extended: "false" }));
+router.use(bodyParser.json());
 
-app.get("/", function (req, res) {
+router.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 
