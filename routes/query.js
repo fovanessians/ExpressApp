@@ -2,9 +2,10 @@
  * DO NOT EdDIT THIS FILE
  * the verification process may break
  *******************************************/
+const express = require('express');
+const router = express.Router();
+require('dotenv').config();
 
-const express = require("express");
-const app = express();
 let mongoose;
 try {
   mongoose = require("mongoose");
