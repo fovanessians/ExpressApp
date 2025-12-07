@@ -22,6 +22,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const router = express.Router();
 
+/*
 const enableCORS = function (req, res, next) {
   if (!process.env.DISABLE_XORIGIN) {
     const allowedOrigins = ["https://www.freecodecamp.org"];
@@ -38,6 +39,7 @@ const enableCORS = function (req, res, next) {
   }
   next();
 };
+*/
 
 // global setting for safety timeouts to handle possible
 // wrong callbacks that will never be called
@@ -46,10 +48,13 @@ const TIMEOUT = 10000;
 router.use(bodyParser.urlencoded({ extended: "false" }));
 router.use(bodyParser.json());
 
+/*
 router.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
+*/
 
+/*
 router.get("/file/*?", function (req, res, next) {
   if (req.params[0] === ".env") {
     return next({ status: 401, message: "ACCESS DENIED" });
@@ -61,6 +66,7 @@ router.get("/file/*?", function (req, res, next) {
     res.type("txt").send(data.toString());
   });
 });
+*/
 
 router.get("/is-mongoose-ok", function (req, res) {
   if (mongoose) {
@@ -70,6 +76,7 @@ router.get("/is-mongoose-ok", function (req, res) {
   }
 });
 
+/*
 const Person = require("./myApp.js").PersonModel;
 
 router.use(function (req, res, next) {
@@ -423,6 +430,7 @@ router.use(function (req, res) {
     res.status(404).type("txt").send("Not Found");
   }
 });
+*/
 
 const listener = app.listen(process.env.PORT || 3000, function () {
   console.log("Your app is listening on port " + listener.address().port);
