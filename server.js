@@ -41,7 +41,7 @@ app.route('/')
 //*****React Diet Tracker from CodePen*****
 app.route('/diet-tracker')
     .get(function(req, res) {
-		  res.sendFile(process.cwd() + 'DietTracker/ReactAppHTML.html');
+		  res.sendFile(process.cwd() + '/DietTracker/ReactAppHTML.html');
     })
 //*****React Diet Tracker from CodePen*****
 
