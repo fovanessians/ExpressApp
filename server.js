@@ -38,6 +38,12 @@ app.route('/')
 		  res.sendFile(process.cwd() + '/views/index.html');
     })
 
+//*****React Diet Tracker from CodePen*****
+app.route('/diet-tracker')
+    .get(function(req, res) {
+		  res.sendFile(process.cwd() + 'DietTracker/ReactAppHTML.html');
+    })
+//*****React Diet Tracker from CodePen*****
 
 /*app.use('/json', (req, res, next) => {
   console.log(req.method + " " + req.path + " " + 
