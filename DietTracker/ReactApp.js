@@ -1,5 +1,5 @@
-//import React from 'https://esm.sh/react@18.2.0'
-//import ReactDOM from 'https://esm.sh/react-dom@18.2.0'
+import React from 'https://esm.sh/react@18.2.0'
+import ReactDOM from 'https://esm.sh/react-dom@18.2.0'
 //import { useState } from "https://esm.sh/react";
 //import ReactDOM from "https://esm.sh/react-dom/client";
 //import React, { useState } from "https://esm.sh/react";
