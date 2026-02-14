@@ -39,6 +39,7 @@ app.route('/')
     })
 
 //*****React Diet Tracker from CodePen*****
+app.use(express.static(process.cwd() + '/DietTracker'));
 app.route('/diet-tracker')
     .get(function(req, res) {
 		  res.sendFile(process.cwd() + '/DietTracker/ReactAppHTML.html');
