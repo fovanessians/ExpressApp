@@ -32,6 +32,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         animation: slide-in-left 10s ease-in-out;
+		min-height: 300px; 
+    	padding: 60px 0;
         
         }
 
@@ -50,6 +52,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         animation: slide-in-right 10s ease-in-out;
+		min-height: 300px; 
+    	padding: 60px 0;
         }
 
 #center {
