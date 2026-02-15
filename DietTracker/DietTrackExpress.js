@@ -12,3 +12,9 @@ const UserName = mongoose.model('names',{
     name: { type: String },
     age: { type: Number }
 });
+
+
+
+
+
+module.exports = router;
