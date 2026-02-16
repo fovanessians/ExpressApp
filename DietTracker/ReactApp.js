@@ -143,7 +143,9 @@ function BreakfastCalories(props) {
   return (
     <div>
       <input
+        id="inputValueBreakfast"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueBreakfast}
@@ -174,7 +176,9 @@ function LunchCalories(props) {
   return (
     <div>
       <input
+        id="inputValueLunch"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueLunch}
@@ -205,7 +209,9 @@ function DinnerCalories(props) {
   return (
     <div>
       <input
+        id="inputValueDinner"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueDinner}
@@ -236,7 +242,9 @@ function SnacksCalories(props) {
   return (
     <div>
       <input
+        id="inputValueSnacks"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueSnacks}
@@ -267,7 +275,9 @@ function OfficeWorkCalories(props) {
   return (
     <div>
       <input
+        id="inputValueOfficeWork"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueOfficeWork}
@@ -298,7 +308,9 @@ function LaborCalories(props) {
   return (
     <div>
       <input
+        id="inputValueLabor"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueLabor}
@@ -329,7 +341,9 @@ function CookingCalories(props) {
   return (
     <div>
       <input
+        id="inputValueCooking"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueCooking}
@@ -360,7 +374,9 @@ function WalkingCalories(props) {
   return (
     <div>
       <input
+        id="inputValueWalking"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueWalking}
@@ -391,7 +407,9 @@ function RunningCalories(props) {
   return (
     <div>
       <input
+        id="inputValueRunning"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueRunning}
@@ -422,7 +440,9 @@ function GymCalories(props) {
   return (
     <div>
       <input
+        id="inputValueGym"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueGym}
@@ -453,7 +473,9 @@ function SportsCalories(props) {
   return (
     <div>
       <input
+        id="inputValueSports"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueSports}
@@ -484,7 +506,9 @@ function OutdoorCalories(props) {
   return (
     <div>
       <input
+        id="inputValueOutdoor"
         type="number"
+        name="calories"
         min="0"
         max="10000"
         value={inputValueOutdoor}
