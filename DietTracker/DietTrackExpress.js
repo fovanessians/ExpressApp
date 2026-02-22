@@ -22,9 +22,16 @@ const mealSchema = new mongoose.Schema({
 });
 
 const breakfastCalories = mongoose.model('Breakfast', mealSchema);
+const newbreakfastCalories = new breakfastCalories({ mealType: breakfast });
+
 const lunchCalories = mongoose.model('Lunch', mealSchema);
+const newlunchCalories = new lunchCalories({ mealType: lunch });
+
 const dinnerCalories = mongoose.model('Dinner', mealSchema);
+const newdinnerCalories = new dinnerCalories({ mealType: dinner });
+
 const snackCalories = mongoose.model('Snack', mealSchema);
+const newsnackCalories = new snackCalories({ mealType: snack });
 
 // activity model***************************
 const activitySchema = new mongoose.Schema({
