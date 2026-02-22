@@ -43,10 +43,11 @@
   margin-right: auto;    /* Pushes from the right */
   margin-bottom: 25px;
   padding: 15px;
-  background-color: #87D37C;
   width: 100%;
   max-width: 340px;
   border-radius: 5px;
+  background: linear-gradient(to right, #333333, #cccccc);
+  background-color: #333333;
 }
 
 @keyframes slide-in-right {
