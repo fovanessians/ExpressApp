@@ -29,6 +29,15 @@ const activityModel = mongoose.model('activity',{
     type: { type: String },
     calories: { type: Number }
 });
+
+const officeCalories = mongoose.model('Office Work', activityModel);
+const manualCalories = mongoose.model('Manual Labor', activityModel);
+const cookingCalories = mongoose.model('Cooking', activityModel);
+const walkingCalories = mongoose.model('Walking', activityModel);
+const runningCalories = mongoose.model('Running', activityModel);
+const gymCalories = mongoose.model('Gym', activityModel);
+const sportsCalories = mongoose.model('Sports', activityModel);
+const outdoorCalories = mongoose.model('Outdoor', activityModel);
 //******************************************
 
 
