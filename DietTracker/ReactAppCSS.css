@@ -41,6 +41,7 @@
   width: 100%;
   background: linear-gradient(to right, #333333, #cccccc) !important;
   padding: 50px 0; /* Adds some space above and below the box */
+  background-color: #E0E0E0;
 }
 
 .container-id {
