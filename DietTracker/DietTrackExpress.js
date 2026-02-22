@@ -27,19 +27,19 @@ const dinnerCalories = mongoose.model('Dinner', mealSchema);
 const snackCalories = mongoose.model('Snack', mealSchema);
 
 // activity model***************************
-const activityModel = mongoose.model('activity',{
+const activitySchema = mongoose.model('activity',{
     activityType: { type: String },
     calories: { type: Number }
 });
 
-const officeCalories = mongoose.model('Office Work', activityModel);
-const manualCalories = mongoose.model('Manual Labor', activityModel);
-const cookingCalories = mongoose.model('Cooking', activityModel);
-const walkingCalories = mongoose.model('Walking', activityModel);
-const runningCalories = mongoose.model('Running', activityModel);
-const gymCalories = mongoose.model('Gym', activityModel);
-const sportsCalories = mongoose.model('Sports', activityModel);
-const outdoorCalories = mongoose.model('Outdoor', activityModel);
+const officeCalories = mongoose.model('Office Work', activitySchema);
+const manualCalories = mongoose.model('Manual Labor', activitySchema);
+const cookingCalories = mongoose.model('Cooking', activitySchema);
+const walkingCalories = mongoose.model('Walking', activitySchema);
+const runningCalories = mongoose.model('Running', activitySchema);
+const gymCalories = mongoose.model('Gym', activitySchema);
+const sportsCalories = mongoose.model('Sports', activitySchema);
+const outdoorCalories = mongoose.model('Outdoor', activitySchema);
 //******************************************
 
 
