@@ -6,12 +6,13 @@ const mySecret = process.env['MONGO_URI']
 mongoose.connect(mySecret, { dbName: 'DietExercise' }, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
-
+/*
 // User model***************************
 const UserName = mongoose.model('names',{
     name: { type: String },
     age: { type: Number }
 });
+*/
 
 // meal model***************************
 const mealModel = mongoose.model('meal',{
@@ -45,7 +46,7 @@ const outdoorCalories = mongoose.model('Outdoor', activityModel);
 
 
 //*******Save to username database*****
-app.post('/api/users', async (req, res) => {
+app.post('/api/meals', async (req, res) => {
   let uname = req.body.username;
   
   let dataBaseUsers = new users({
