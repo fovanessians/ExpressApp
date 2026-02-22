@@ -37,6 +37,12 @@
         
         }
 
+.full-width-gradient {
+  width: 100%;
+  background: linear-gradient(to right, #333333, #cccccc) !important;
+  padding: 50px 0; /* Adds some space above and below the box */
+}
+
 .container-id {
   display: block;        /* Change from inline-block to block */
   margin-left: auto;     /* Pushes from the left */
@@ -46,7 +52,7 @@
   width: 100%;
   max-width: 340px;
   border-radius: 5px;
-  background-image: linear-gradient(to right, #333333, #cccccc) !important;
+  background-image: linear-gradient(to right, #cccccc, #f8f9fa) !important;
   background-color: transparent;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
 }
