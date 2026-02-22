@@ -27,7 +27,7 @@ const dinnerCalories = mongoose.model('Dinner', mealSchema);
 const snackCalories = mongoose.model('Snack', mealSchema);
 
 // activity model***************************
-const activitySchema = mongoose.model('activity',{
+const activitySchema = new mongoose.Schema({
     activityType: { type: String },
     calories: { type: Number }
 });
