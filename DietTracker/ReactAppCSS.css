@@ -47,7 +47,6 @@
   max-width: 340px;
   border-radius: 5px;
   background: linear-gradient(to right, #333333, #cccccc);
-  background-color: #333333;
 }
 
 @keyframes slide-in-right {
