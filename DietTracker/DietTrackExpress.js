@@ -14,17 +14,17 @@ const UserName = mongoose.model('names',{
 });
 
 // meal model***************************
-const UserName = mongoose.model('meal',{
+const mealModel = mongoose.model('meal',{
     type: { type: String },
     calories: { type: Number }
 });
 
 // activity model***************************
-const UserName = mongoose.model('activity',{
+const activityModel = mongoose.model('activity',{
     type: { type: String },
     calories: { type: Number }
 });
-
+//******************************************
 
 
 module.exports = router;
