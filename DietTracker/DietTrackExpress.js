@@ -49,10 +49,19 @@ const cookingCalories = mongoose.model('Cooking', activitySchema);
 const newCooking = new cookingCalories({ activityType: cooking });
 
 const walkingCalories = mongoose.model('Walking', activitySchema);
+const newwalking = new walkingCalories({ activityType: walking });
+
 const runningCalories = mongoose.model('Running', activitySchema);
+const newRunning = new runningCalories({ activityType: running });
+
 const gymCalories = mongoose.model('Gym', activitySchema);
+const newGym = new gymCalories({ activityType: gym });
+
 const sportsCalories = mongoose.model('Sports', activitySchema);
+const newSports = new sportsCalories({ activityType: sports });
+
 const outdoorCalories = mongoose.model('Outdoor', activitySchema);
+const newOutdoor = new officeOutdoor({ activityType: outdoor });
 //******************************************
 
 
