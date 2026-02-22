@@ -16,7 +16,7 @@ const UserName = mongoose.model('names',{
 
 // meal model***************************
 const mealModel = mongoose.model('meal',{
-    name: { type: String },
+    mealType: { type: String },
     calories: { type: Number }
 });
 
@@ -27,7 +27,7 @@ const snackCalories = mongoose.model('Snack', mealModel);
 
 // activity model***************************
 const activityModel = mongoose.model('activity',{
-    type: { type: String },
+    activityType: { type: String },
     calories: { type: Number }
 });
 
