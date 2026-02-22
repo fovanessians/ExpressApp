@@ -153,7 +153,7 @@ function BreakfastCalories(props) {
       />
       <p>Confirmation: {inputValueBreakfast}</p>
          <input type="submit" 
-               value="breakfast">
+               value="submit">
       </input>
       <br />
     </div>
