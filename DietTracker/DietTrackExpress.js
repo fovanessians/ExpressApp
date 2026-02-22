@@ -5,17 +5,18 @@ const mongoose = require("mongoose");
 const mySecret = process.env['MONGO_URI']
 mongoose.connect(mySecret, { dbName: 'DietExercise' }, { useNewUrlParser: true, useUnifiedTopology: true });
 
+//Mongoose Structure = Schema $\rightarrow$ Model $\rightarrow$ Document
 
 /*
 // User model***************************
-const UserName = mongoose.model('names',{
+const userNameSchema = new mongoose.Schema({
     name: { type: String },
     age: { type: Number }
 });
 */
 
 // meal model***************************
-const mealModel = mongoose.model('meal',{
+const mealModel = new mongoose.Schema({
     mealType: { type: String },
     calories: { type: Number }
 });
