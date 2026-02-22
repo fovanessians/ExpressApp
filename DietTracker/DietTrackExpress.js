@@ -15,9 +15,14 @@ const UserName = mongoose.model('names',{
 
 // meal model***************************
 const mealModel = mongoose.model('meal',{
-    type: { type: String },
+    name: { type: String },
     calories: { type: Number }
 });
+
+const breakfastCalories = mongoose.model('Breakfast', mealModel);
+const lunchCalories = mongoose.model('Lunch', mealModel);
+const dinnerCalories = mongoose.model('Dinner', mealModel);
+const snackCalories = mongoose.model('Snack', mealModel);
 
 // activity model***************************
 const activityModel = mongoose.model('activity',{
