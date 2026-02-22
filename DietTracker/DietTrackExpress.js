@@ -16,15 +16,15 @@ const userNameSchema = new mongoose.Schema({
 */
 
 // meal model***************************
-const mealModel = new mongoose.Schema({
+const mealSchema = new mongoose.Schema({
     mealType: { type: String },
     calories: { type: Number }
 });
 
-const breakfastCalories = mongoose.model('Breakfast', mealModel);
-const lunchCalories = mongoose.model('Lunch', mealModel);
-const dinnerCalories = mongoose.model('Dinner', mealModel);
-const snackCalories = mongoose.model('Snack', mealModel);
+const breakfastCalories = mongoose.model('Breakfast', mealSchema);
+const lunchCalories = mongoose.model('Lunch', mealSchema);
+const dinnerCalories = mongoose.model('Dinner', mealSchema);
+const snackCalories = mongoose.model('Snack', mealSchema);
 
 // activity model***************************
 const activityModel = mongoose.model('activity',{
