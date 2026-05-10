@@ -3,6 +3,17 @@
 //import { useState } from "https://esm.sh/react";
 //import ReactDOM from "https://esm.sh/react-dom/client";
 //import React, { useState } from "https://esm.sh/react";
+/*Mongoose Structure = Schema $\rightarrow$ Model $\rightarrow$ Document
+project-root/
+├── backend/
+│   ├── models/        # Mongoose schemas (e.g., User.js)
+│   ├── routes/        # Express routes handling MongoDB operations
+│   └── server.js      # Express app with MongoDB connection
+└── frontend/
+    ├── src/
+    │   └── App.js     # React components making API calls
+    └── package.json 
+*/
 
 import React, { useState } from "https://esm.sh/react@18.2.0";
 import ReactDOM from "https://esm.sh/react-dom@18.2.0/client";
