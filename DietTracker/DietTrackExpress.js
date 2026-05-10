@@ -5,7 +5,17 @@ const mongoose = require("mongoose");
 const mySecret = process.env['MONGO_URI']
 mongoose.connect(mySecret, { dbName: 'DietExercise' }, { useNewUrlParser: true, useUnifiedTopology: true });
 
-//Mongoose Structure = Schema $\rightarrow$ Model $\rightarrow$ Document
+/*Mongoose Structure = Schema $\rightarrow$ Model $\rightarrow$ Document
+project-root/
+├── backend/
+│   ├── models/        # Mongoose schemas (e.g., User.js)
+│   ├── routes/        # Express routes handling MongoDB operations
+│   └── server.js      # Express app with MongoDB connection
+└── frontend/
+    ├── src/
+    │   └── App.js     # React components making API calls
+    └── package.json 
+*/
 
 /*
 // User model***************************
