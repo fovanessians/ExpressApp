@@ -80,9 +80,8 @@ const newOutdoor = new officeOutdoor({ activityType: outdoor });
 
 //*******Save to database - breakfast*****
 app.post('/api/breakfast', async (req, res) => {
-  let mealType = req.body.username;
-  
-  let calories = new users({
+  let mealType = req.body.id;
+  let breakfastCalories = new users({
       username: uname,
     });
 //**************************************
