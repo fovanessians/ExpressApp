@@ -78,11 +78,11 @@ const newOutdoor = new officeOutdoor({ activityType: outdoor });
 
 
 
-//*******Save to username database*****
-app.post('/api/meals', async (req, res) => {
-  let uname = req.body.username;
+//*******Save to database - breakfast*****
+app.post('/api/breakfast', async (req, res) => {
+  let mealType = req.body.username;
   
-  let dataBaseUsers = new users({
+  let calories = new users({
       username: uname,
     });
 //**************************************
