@@ -25,13 +25,13 @@ openButtonBreakfast.addEventListener('click', () => {
  document.querySelector("#dialogBreakfast").showModal();
 });
   <article
-    id="electric-cars"
+    id="diet-events"
     data-columns="3"
     data-index-number="12314"
-    data-parent="cars">
+    data-parent="diet-events">
     <!-- Electric car content -->
   </article>
-const article = document.querySelector("#electric-cars");
+const article = document.querySelector("#diet-events");
 
 
 // Find all elements with a data-columns attribute
