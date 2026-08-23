@@ -149,7 +149,11 @@ function BreakfastCalories(props) {
 
   const handleChange = (event) => {
     setInputValueBreakfast(event.target.value);
-  };
+ };
+
+    useEffect(() => {
+    localStorage.setItem("breakfast", inputValueBreakfast);
+  }, [inputValueBreakfast]);
 
   return (
     <div>
@@ -184,6 +188,10 @@ function LunchCalories(props) {
     setInputValueLunch(event.target.value);
   };
 
+  useEffect(() => {
+    localStorage.setItem("lunch", inputValueLunch);
+  }, [inputValueLunch]);
+
   return (
     <div>
       <input
@@ -216,6 +224,10 @@ function DinnerCalories(props) {
   const handleChange = (event) => {
     setInputValueDinner(event.target.value);
   };
+
+ useEffect(() => {
+    localStorage.setItem("dinner", inputValueDinner);
+  }, [inputValueDinner]);
 
   return (
     <div>
