@@ -75,7 +75,7 @@ const newOutdoor = new officeOutdoor({ activityType: outdoor });
 //******************************************
 
 //*******Save to database - breakfast*****
-app.get('/DietExercise/entry', async (req, res) => {
+app.get('/DietExercise/entry', (req, res) => {
     res.send('entry recorded');
 });
 //**************************************
