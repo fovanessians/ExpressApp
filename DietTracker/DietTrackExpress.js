@@ -1,6 +1,13 @@
 require('dotenv').config();
-const app = express()
-const cors = require('cors')
+const express = require('express');
+const cors = require('cors');
+
+const app = express();
+
+// ✅ Middleware (must come before routes)
+app.use(cors());
+app.use(express.json());
+
 const mongoose = require("mongoose");
 const mySecret = process.env['MONGO_URI']
 mongoose.connect(mySecret, { dbName: 'DietExercise' }, { useNewUrlParser: true, useUnifiedTopology: true });
