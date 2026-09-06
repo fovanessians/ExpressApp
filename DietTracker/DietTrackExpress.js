@@ -74,6 +74,11 @@ const outdoorCalories = mongoose.model('Outdoor', activitySchema);
 const newOutdoor = new officeOutdoor({ activityType: outdoor });
 //******************************************
 
+//*******Save to database - breakfast*****
+app.get('/DietExercise/entry', async (req, res) => {
+    res.send('entry recorded');
+});
+//**************************************
 
 
 
