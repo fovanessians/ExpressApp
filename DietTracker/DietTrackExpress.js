@@ -89,6 +89,13 @@ app.post('/api/breakfast', async (req, res) => {
   let breakfastCalories = req.body.calories;
     });
 //**************************************
+//Listen on port set in environment variable or default to 3001
 
+const port = process.env.PORT || 3001;
+
+const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+server.keepAliveTimeout = 120 * 1000;
+server.headersTimeout = 120 * 1000;
 
 module.exports = router;
