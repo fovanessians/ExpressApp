@@ -82,7 +82,7 @@ const newOutdoor = new officeOutdoor({ activityType: outdoor });
 //******************************************
 
 //*******Entry Route********************
-app.get('DietExercise/entry', async (req, res) => {
+app.get('DietTracker/entry', async (req, res) => {
     res.send('entry recorded');
 });
 //**************************************
