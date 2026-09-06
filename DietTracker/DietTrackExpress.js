@@ -37,7 +37,7 @@ const mealSchema = new mongoose.Schema({
     mealType: { type: String },
     calories: { type: Number }
 });
-
+/*
 const breakfastCalories = mongoose.model('Breakfast', mealSchema);
 const newBreakfast = new breakfastCalories({ mealType: breakfast });
 
@@ -56,7 +56,7 @@ const activitySchema = new mongoose.Schema({
     calories: { type: Number }
 });
 
-/*
+
 const officeCalories = mongoose.model('Office Work', activitySchema);
 const newOffice = new officeCalories({ activityType: office });
 
