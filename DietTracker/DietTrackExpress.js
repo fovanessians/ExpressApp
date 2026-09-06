@@ -74,7 +74,9 @@ const outdoorCalories = mongoose.model('Outdoor', activitySchema);
 const newOutdoor = new officeOutdoor({ activityType: outdoor });
 //******************************************
 
-//*******Entry Route*****
+//*******Entry Route********************
+const entryDB = require('./DietTracker');
+app.use('/DietTracker', entryDB);
 app.get('/DietExercise/entry', async (req, res) => {
     res.send('entry recorded');
 });
