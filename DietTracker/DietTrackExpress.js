@@ -82,8 +82,6 @@ const newOutdoor = new officeOutdoor({ activityType: outdoor });
 //******************************************
 
 //*******Entry Route********************
-const entryDB = require('./DietExercise');
-app.use('/DietExercise', entryDB);
 app.get('/DietExercise/entry', async (req, res) => {
     res.send('entry recorded');
 });
