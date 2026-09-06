@@ -112,7 +112,10 @@ app.use(function(err, req, res, next) {
   }  
 })
 
-
+//DietTracker Routes*********************
+const entryDB = require('./ExpressApp/DietTracker/DietTrackExpress');
+app.use('/DietTracker', entryDB);
+//DietTracker Routes*********************
 
 //Listen on port set in environment variable or default to 3001
 
