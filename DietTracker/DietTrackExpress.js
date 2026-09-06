@@ -56,6 +56,7 @@ const activitySchema = new mongoose.Schema({
     calories: { type: Number }
 });
 
+/*
 const officeCalories = mongoose.model('Office Work', activitySchema);
 const newOffice = new officeCalories({ activityType: office });
 
@@ -80,6 +81,7 @@ const newSports = new sportsCalories({ activityType: sports });
 const outdoorCalories = mongoose.model('Outdoor', activitySchema);
 const newOutdoor = new officeOutdoor({ activityType: outdoor });
 //******************************************
+*/
 
 //*******Entry Route********************
 app.get('/entry', async (req, res) => {
