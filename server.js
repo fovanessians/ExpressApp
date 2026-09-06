@@ -91,6 +91,10 @@ app.use('/tryDBsave', tryDbIndex);
 const queryDbIndex = require('./routes/query/query');
 app.use('/query', queryDbIndex);
 
+//DietTracker Routes*********************
+const entryDB = require('./DietTracker/DietTrackExpress');
+app.use('/DietTracker', entryDB);
+//DietTracker Routes*********************
 
 app.get('/test', (req, res, next) => {
   res.status(200).send('OK');;
@@ -111,11 +115,6 @@ app.use(function(err, req, res, next) {
       .send(err.message || 'SERVER ERROR');
   }  
 })
-
-//DietTracker Routes*********************
-const entryDB = require('./DietTracker/DietTrackExpress');
-app.use('/DietTracker', entryDB);
-//DietTracker Routes*********************
 
 //Listen on port set in environment variable or default to 3001
 
