@@ -113,7 +113,7 @@ app.use(function(err, req, res, next) {
 })
 
 //DietTracker Routes*********************
-const entryDB = require('./ExpressApp/DietTracker/DietTrackExpress');
+const entryDB = require('./DietTracker/DietTrackExpress');
 app.use('/DietTracker', entryDB);
 //DietTracker Routes*********************
 
