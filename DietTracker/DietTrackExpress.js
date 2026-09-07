@@ -89,12 +89,14 @@ router.get('/entry', async (req, res) => {
 });
 //**************************************
 //*****Routes for Calories****
-router.post('/:meal', (req, res) => {
+/*
+  router.post('/:meal', (req, res) => {
   const { meal } = req.params;
   const { calories } = req.body;
   console.log(meal, calories);
   res.json({ message: `${meal} saved` });
 });
+*/
 //*****Routes for Calories*****
 
 
