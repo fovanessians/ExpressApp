@@ -39,16 +39,16 @@ const mealSchema = new mongoose.Schema({
 });
 
 const breakfastCalories = mongoose.model('Breakfast', mealSchema);
-const newBreakfast = new breakfastCalories({ mealType: breakfast });
+const newBreakfast = new breakfastCalories({ mealType: 'breakfast' });
 
 const lunchCalories = mongoose.model('Lunch', mealSchema);
-const newLunch = new lunchCalories({ mealType: lunch });
+const newLunch = new lunchCalories({ mealType: 'lunch' });
 
 const dinnerCalories = mongoose.model('Dinner', mealSchema);
-const newDinner = new dinnerCalories({ mealType: dinner });
+const newDinner = new dinnerCalories({ mealType: 'dinner' });
 
 const snackCalories = mongoose.model('Snack', mealSchema);
-const newSnack = new snackCalories({ mealType: snack });
+const newSnack = new snackCalories({ mealType: 'snack' });
 
 // activity model***************************
 const activitySchema = new mongoose.Schema({
@@ -58,28 +58,28 @@ const activitySchema = new mongoose.Schema({
 
 
 const officeCalories = mongoose.model('Office Work', activitySchema);
-const newOffice = new officeCalories({ activityType: office });
+const newOffice = new officeCalories({ activityType: 'office' });
 
 const manualCalories = mongoose.model('Manual Labor', activitySchema);
-const newManual = new manualCalories({ activityType: manual });
+const newManual = new manualCalories({ activityType: 'manual' });
 
 const cookingCalories = mongoose.model('Cooking', activitySchema);
-const newCooking = new cookingCalories({ activityType: cooking });
+const newCooking = new cookingCalories({ activityType: 'cooking' });
 
 const walkingCalories = mongoose.model('Walking', activitySchema);
-const newwalking = new walkingCalories({ activityType: walking });
+const newwalking = new walkingCalories({ activityType: 'walking' });
 
 const runningCalories = mongoose.model('Running', activitySchema);
-const newRunning = new runningCalories({ activityType: running });
+const newRunning = new runningCalories({ activityType: 'running' });
 
 const gymCalories = mongoose.model('Gym', activitySchema);
-const newGym = new gymCalories({ activityType: gym });
+const newGym = new gymCalories({ activityType: 'gym' });
 
 const sportsCalories = mongoose.model('Sports', activitySchema);
-const newSports = new sportsCalories({ activityType: sports });
+const newSports = new sportsCalories({ activityType: 'sports' });
 
 const outdoorCalories = mongoose.model('Outdoor', activitySchema);
-const newOutdoor = new officeOutdoor({ activityType: outdoor });
+const newOutdoor = new officeOutdoor({ activityType: 'outdoor' });
 //******************************************
 
 
