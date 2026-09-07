@@ -63,7 +63,12 @@ class modal {
   openModal() {
     console.log(`invoke modal ${this.meal}`);
     document.querySelector(`#button${this.meal}`).addEventListener('click', () => { document.querySelector(`#dialog${this.meal}`).showModal();});
-
+    router.post('/:meal', (req, res) => {
+      const { meal } = req.params;
+      const { calories } = req.body;
+      console.log(meal, calories);
+      res.json({ message: `${meal} saved` });
+});
    }
   
   message(){
