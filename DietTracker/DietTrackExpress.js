@@ -84,7 +84,7 @@ const newOutdoor = new officeOutdoor({ activityType: outdoor });
 */
 
 //*******Entry Route********************
-app.get('/entry', async (req, res) => {
+router.get('/entry', async (req, res) => {
     res.send('entry recorded');
 });
 //**************************************
