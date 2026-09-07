@@ -29,7 +29,7 @@ openButtonBreakfast.addEventListener('click', () => {
     data-columns="3"
     data-index-number="12314"
     data-parent="diet-events">
-    <!-- Electric car content -->
+    <!-- Calorie content -->
   </article>
 const article = document.querySelector("#diet-events");
 
@@ -63,6 +63,11 @@ class modal {
   openModal() {
     console.log(`invoke modal ${this.meal}`);
     document.querySelector(`#button${this.meal}`).addEventListener('click', () => { document.querySelector(`#dialog${this.meal}`).showModal();});
+    fetch('/api/${this.meal}', {
+        method: 'POST',
+        body: JSON.stringify({ calories: Number(calories) })
+  }).then(res => res.json()).then(data => console.log(data));
+  
    }
   
   message(){
@@ -154,6 +159,13 @@ function BreakfastCalories(props) {
     useEffect(() => {
     localStorage.setItem("breakfast", inputValueBreakfast);
   }, [inputValueBreakfast]);
+
+     const handleSubmit = () => {
+    fetch('/api/breakfast', {
+      method: 'POST',
+      body: JSON.stringify({ calories: inputValueBreakfast })
+    }).then(res => res.json()).then(data => console.log(data));
+  };
 
   return (
     <div>
