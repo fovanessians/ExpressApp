@@ -156,13 +156,6 @@ function BreakfastCalories(props) {
     localStorage.setItem("breakfast", inputValueBreakfast);
   }, [inputValueBreakfast]);
 
-     const handleSubmit = () => {
-    fetch('/api/breakfast', {
-      method: 'POST',
-      body: JSON.stringify({ calories: inputValueBreakfast })
-    }).then(res => res.json()).then(data => console.log(data));
-  };
-
   return (
     <div>
       <input
