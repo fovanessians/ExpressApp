@@ -101,11 +101,7 @@ router.get('/entry', async (req, res) => {
 
 
 
-//*******Save to database - breakfast*****
-router.post('/api/breakfast', async (req, res) => {
-  let mealType = req.body.id;
-  let breakfastCalories = req.body.calories;
-    });
+
 //**************************************
 //Listen on port set in environment variable or default to 3001
 
