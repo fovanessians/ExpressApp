@@ -63,12 +63,12 @@ class modal {
   openModal() {
     console.log(`invoke modal ${this.meal}`);
     document.querySelector(`#button${this.meal}`).addEventListener('click', () => { document.querySelector(`#dialog${this.meal}`).showModal();});
-    fetch('/api/${this.meal}', {
+
+   }
+      fetch('/api/${this.meal}', {
         method: 'POST',
         body: JSON.stringify({ calories: Number(calories) })
   }).then(res => res.json()).then(data => console.log(data));
-  
-   }
   
   message(){
     console.log('message');
