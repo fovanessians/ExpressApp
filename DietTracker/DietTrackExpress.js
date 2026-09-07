@@ -8,9 +8,9 @@ const router = express.Router();
 app.use(cors());
 app.use(express.json());
 
-//const mongoose = require("mongoose");
-//const mySecret = process.env['MONGO_URI']
-//mongoose.connect(mySecret, { dbName: 'DietExercise' }, { useNewUrlParser: true, useUnifiedTopology: true });
+const mongoose = require("mongoose");
+const mySecret = process.env['MONGO_URI']
+mongoose.connect(mySecret, { dbName: 'DietExercise' }, { useNewUrlParser: true, useUnifiedTopology: true });
 
 /*Mongoose Structure = Schema $\rightarrow$ Model $\rightarrow$ Document
 project-root/
