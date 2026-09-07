@@ -37,7 +37,7 @@ const mealSchema = new mongoose.Schema({
     mealType: { type: String },
     calories: { type: Number }
 });
-/*
+
 const breakfastCalories = mongoose.model('Breakfast', mealSchema);
 const newBreakfast = new breakfastCalories({ mealType: breakfast });
 
@@ -81,7 +81,7 @@ const newSports = new sportsCalories({ activityType: sports });
 const outdoorCalories = mongoose.model('Outdoor', activitySchema);
 const newOutdoor = new officeOutdoor({ activityType: outdoor });
 //******************************************
-*/
+
 
 //*******Entry Route********************
 router.get('/entry', async (req, res) => {
