@@ -93,7 +93,7 @@ router.get('/entry', async (req, res) => {
 
 
 //*******Save to database - breakfast*****
-app.post('/api/breakfast', async (req, res) => {
+router.post('/api/breakfast', async (req, res) => {
   let mealType = req.body.id;
   let breakfastCalories = req.body.calories;
     });
