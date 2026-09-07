@@ -100,7 +100,7 @@ app.post('/api/breakfast', async (req, res) => {
 //**************************************
 //Listen on port set in environment variable or default to 3001
 
-const port = process.env.PORT || 3001;
+//const port = process.env.PORT || 3001;
 
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
