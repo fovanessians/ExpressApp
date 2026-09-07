@@ -79,7 +79,7 @@ const sportsCalories = mongoose.model('Sports', activitySchema);
 const newSports = new sportsCalories({ activityType: 'sports' });
 
 const outdoorCalories = mongoose.model('Outdoor', activitySchema);
-const newOutdoor = new officeOutdoor({ activityType: 'outdoor' });
+const newOutdoor = new officeOutdoor({ activityType: 'outdoor' }); 
 //******************************************
 
 
