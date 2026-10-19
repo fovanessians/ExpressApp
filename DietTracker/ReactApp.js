@@ -492,7 +492,8 @@ function GymCalories(props) {
     setInputValueGym(event.target.value);
   };
 
-localStorage.setItem("gym", inputValueGym);
+ useEffect(() => {
+    localStorage.setItem("gym", inputValueGym);
   }, [inputValueGym]);
 
   return (
