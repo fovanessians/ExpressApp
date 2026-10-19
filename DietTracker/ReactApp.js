@@ -90,37 +90,7 @@ class modalAct {
   }
 }
 
-let officeWork = new modalAct("OfficeWork");
-officeWork.message();
-officeWork.openModal();
 
-let manualLabor = new modalAct("ManualLabor");
-manualLabor.message();
-manualLabor.openModal();
-
-let cooking = new modalAct("Cooking");
-cooking.message();
-cooking.openModal();
-
-let walking = new modalAct("Walking");
-walking.message();
-walking.openModal();
-
-let running = new modalAct("Running");
-running.message();
-running.openModal();
-
-let gym = new modalAct("Gym");
-gym.message();
-gym.openModal();
-
-let sports = new modalAct("Sports");
-sports.message();
-sports.openModal();
-
-let outdoor = new modalAct("Outdoor");
-outdoor.message();
-outdoor.openModal();
 
 
 /*---------React Personal Information---------*/
@@ -153,7 +123,40 @@ function BreakfastCalories(props) {
     let snacks = new modal("Snacks");
     snacks.message();
     snacks.openModal();
+
+    let officeWork = new modalAct("OfficeWork");
+    officeWork.message();
+    officeWork.openModal();
+    
+    let manualLabor = new modalAct("ManualLabor");
+    manualLabor.message();
+    manualLabor.openModal();
+    
+    let cooking = new modalAct("Cooking");
+    cooking.message();
+    cooking.openModal();
+    
+    let walking = new modalAct("Walking");
+    walking.message();
+    walking.openModal();
+    
+    let running = new modalAct("Running");
+    running.message();
+    running.openModal();
+    
+    let gym = new modalAct("Gym");
+    gym.message();
+    gym.openModal();
+    
+    let sports = new modalAct("Sports");
+    sports.message();
+    sports.openModal();
+    
+    let outdoor = new modalAct("Outdoor");
+    outdoor.message();
+    outdoor.openModal();
   }, []);
+    
     useEffect(() => {
     localStorage.setItem("breakfast", inputValueBreakfast);
   }, [inputValueBreakfast]);
