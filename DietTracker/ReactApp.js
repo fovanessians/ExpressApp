@@ -76,21 +76,7 @@ class modal {
   }
 }
 
-let breakfast = new modal("Breakfast");
-breakfast.message();
-breakfast.openModal();
 
-let lunch = new modal("Lunch");
-lunch.message();
-lunch.openModal();
-
-let dinner = new modal("Dinner");
-dinner.message();
-dinner.openModal();
-
-let snacks = new modal("Snacks");
-snacks.message();
-snacks.openModal();
 
 /*-----Activity----*/
 
@@ -156,7 +142,23 @@ function BreakfastCalories(props) {
   const handleChange = (event) => {
     setInputValueBreakfast(event.target.value);
  };
-
+    useEffect(() => {
+    let breakfast = new modal("Breakfast");
+    breakfast.message();
+    breakfast.openModal();
+    
+    let lunch = new modal("Lunch");
+    lunch.message();
+    lunch.openModal();
+    
+    let dinner = new modal("Dinner");
+    dinner.message();
+    dinner.openModal();
+    
+    let snacks = new modal("Snacks");
+    snacks.message();
+    snacks.openModal();
+  }, []);
     useEffect(() => {
     localStorage.setItem("breakfast", inputValueBreakfast);
   }, [inputValueBreakfast]);
