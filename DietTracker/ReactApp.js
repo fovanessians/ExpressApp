@@ -68,7 +68,7 @@ class modal {
       //const { calories } = req.body;
       //console.log(meal, calories);
       //res.json({ message: `${meal} saved` });
-});
+//});
    }
   
   message(){
