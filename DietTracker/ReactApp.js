@@ -529,7 +529,8 @@ function SportsCalories(props) {
     setInputValueSports(event.target.value);
   };
 
-localStorage.setItem("sports", inputValueSports);
+ useEffect(() => {
+    localStorage.setItem("sports", inputValueSports);
   }, [inputValueSports]);
 
   return (
@@ -564,7 +565,7 @@ function OutdoorCalories(props) {
   const handleChange = (event) => {
     setInputValueOutdoor(event.target.value);
   };
-
+useEffect(() => {
 localStorage.setItem("outdoor", inputValueOutdoor);
   }, [inputValueOutdoor]);
 
